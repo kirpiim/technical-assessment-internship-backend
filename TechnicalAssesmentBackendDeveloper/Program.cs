@@ -46,7 +46,22 @@ public class ItemManager
     // TODO: Implement this method
     public void RemoveItem(string item)
     {
-        throw new NotImplementedException("RemoveItem method is not implemented yet. Please remove this line and implement this method.");
+        // check for empty or whitespace
+        if (string.IsNullOrWhiteSpace(item))
+        {
+            Console.WriteLine("Cannot remove an empty or null item.");
+            return;
+        }
+
+        if (items.Contains(item))
+        {
+            items.Remove(item);
+            Console.WriteLine($"Removed item: {item}");
+        }
+        else
+        {
+            Console.WriteLine($"Item not found: {item}");
+        }
     }
 
     public void ClearAllItems()
