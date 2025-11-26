@@ -26,7 +26,8 @@
 
 public class ItemManager
 {
-    private List<string> items;
+    private List<string> items = new List<string>();
+
 
     public void AddItem(string item)
     {
@@ -50,13 +51,14 @@ public class ItemManager
 
     public void ClearAllItems()
     {
-        items = [];
+        items = new List<string>();
     }
 }
 
 public class ItemManager<T>
 {
-    private List<T> items;
+    private List<T> items = new List<T>();
+
 
     public void AddItem(T item)
     {
@@ -73,6 +75,6 @@ public class ItemManager<T>
 
     public void ClearAllItems()
     {
-        items = [];
+        items = new List<T>();
     }
 }
