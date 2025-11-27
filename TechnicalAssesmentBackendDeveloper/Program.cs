@@ -29,10 +29,9 @@
     }
 }
 
-public class ItemManager
+public class ItemManager : IItemManager
 {
     private List<string> items = new List<string>();
-
 
     public void AddItem(string item)
     {
